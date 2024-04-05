@@ -1,0 +1,47 @@
+#include <Wire.h>
+
+// BH1750 I2C地址
+#define BH1750_ADDRESS 0x23
+
+// 命令字节
+#define BH1750_POWER_ON 0x01
+#define BH1750_RESET 0x07
+#define BH1750_CONTINUOUS_HIGH_RES_MODE  0x10
+
+void setup() {
+  Serial.begin(115200);
+  Wire.begin();
+
+  // 初始化BH1750传感器
+  Wire.beginTransmission(BH1750_ADDRESS);
+  Wire.write(BH1750_POWER_ON); // 打开传感器
+  Wire.endTransmission();
+  
+  delay(10); // 等待传感器启动
+  
+  Wire.beginTransmission(BH1750_ADDRESS);
+  Wire.write(BH1750_RESET); // 重置传感器
+  Wire.endTransmission();
+  
+  delay(10); // 等待传感器重置
+  
+  Wire.beginTransmission(BH1750_ADDRESS);
+  Wire.write(BH1750_CONTINUOUS_HIGH_RES_MODE); // 设置为连续高分辨率模式
+  Wire.endTransmission();
+}
+
+void loop() {
+  // 读取光强值
+  Wire.requestFrom(BH1750_ADDRESS, 2);
+  if(Wire.available() == 2) {
+    unsigned int reading = Wire.read();
+    reading <<= 8;
+    reading |= Wire.read();
+    
+    float lux = reading / 1.2; // 转换为勒克斯(lux)
+    Serial.print("Light: ");
+    Serial.print(lux);
+    Serial.println(" lx");
+  }
+  delay(100000); // 每10秒读取一次
+}
