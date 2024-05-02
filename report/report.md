@@ -8,9 +8,7 @@ link to Edge Impulse projects:[https://studio.edgeimpulse.com/studio/362703](htt
 ### Project Overview
 
 The "Smart Voice Light" project is a sophisticated lighting system activated and controlled through voice commands. It leverages a voice recognition model to interpret spoken instructions like "link," "cut," and "breathe," each triggering specific lighting responses. By integrating advanced machine learning algorithms with practical hardware components, the system allows users to manage lighting atmospheres hands-free.
-
 ![4bc4a68a23f8cdc26534121b72e53eb](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/75cca286-e05e-4a28-9992-5c24aa5f8c82)
-
 
 ### Inspiration
 
@@ -18,13 +16,11 @@ The inspiration behind this project stemmed from the growing demand for smart ho
 
 ### Examples and Basis
 
-
-*Tip: probably ~200 words and images are good!*
+The project draws on existing voice smart control products from products such as Amazon Echo , Google Home , Amazon Echo and Google Home as well as voice control that references various smart home features. However, unlike these products that rely on commercial cloud services, the "smart voice light" hardware runs entirely on local hardware. This approach ensures faster response times and protects user privacy. Furthermore, this project reflects a setup for real-time audio processing in embedded system design, making it a practical example of applying machine learning in an IoT environment.
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/1bc92bd1-e1ec-4d5a-98d4-9880fc78c4ca)
 
 ## Research Question
-What is the problem you are trying to solve
-
-*Tip: probably 1 or 2 sentences*
+Objective: How can voice recognition technology be effectively utilized to control lighting systems in a responsive and user-friendly manner?
 
 ## Application Overview
 Thinking back to the various application diagrams you have seen through the module - how would you describe an overview of the building blocks of your project - how do they connect, what do the component parts include.
