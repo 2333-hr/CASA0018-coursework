@@ -87,15 +87,12 @@ Moving forward, addressing the identified issues requires a multi-faceted approa
 
 *Tip: we use [https://www.citethisforme.com](https://www.citethisforme.com) to make this task even easier.* 
 
-----
-
 ## Declaration of Authorship
 
-I, AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
+I, Huarui Yang, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
 
+Huarui Yang
 
-*Digitally Sign by typing your name here*
-
-ASSESSMENT DATE
+2 May 2024
 
 Word count: 
