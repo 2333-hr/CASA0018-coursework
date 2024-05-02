@@ -104,7 +104,6 @@ Moving forward, addressing the identified issues requires a multi-faceted approa
 
 ![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/feb43d32-6598-4e1e-8c91-a30fbe6e8670)
 ![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/cf727f49-16aa-49f0-9691-ebbfe2ddcc2c)
-![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/b4345039-ec60-428e-a5e9-9382b1884ee6)
 <img width="465" alt="f8e5db370964bfa074e86f9b3b73993" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/2d20b941-0e03-4ccf-89ea-b94709fd550c">
 <img width="473" alt="5acae144959fe3ab14a69faff46f43f" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/c99cc766-c3b7-47b0-9232-9e45cac463b1">
 <img width="426" alt="710ef57d5fd6b1196d29dadeb27cb84" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/d52a2fee-2902-4623-a6e7-5664b2a71c85">
