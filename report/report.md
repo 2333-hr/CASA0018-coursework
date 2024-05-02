@@ -1,6 +1,8 @@
-# Report title goes here
+# Smart Voice Light: A Voice-Activated Lighting System
 
-Name of author, link to github repo with project work in / link to Edge Impulse projects
+Huarui Yang
+link to github:
+link to Edge Impulse projects:[https://studio.edgeimpulse.com/studio/362703](https://studio.edgeimpulse.com/studio/362703)
 
 ## Introduction
 - an overview of what the project does
