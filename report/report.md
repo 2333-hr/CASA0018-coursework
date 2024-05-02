@@ -1,7 +1,9 @@
 # Smart Voice Light: A Voice-Activated Lighting System
 
 Huarui Yang
+
 link to github:[https://github.com/2333-hr/CASA0018-coursework](https://github.com/2333-hr/CASA0018-coursework)
+
 link to Edge Impulse projects:[https://studio.edgeimpulse.com/studio/362703](https://studio.edgeimpulse.com/studio/362703)
 
 ## Introduction
@@ -23,14 +25,22 @@ The project draws on existing voice smart control products from products such as
 Objective: How can voice recognition technology be effectively utilized to control lighting systems in a responsive and user-friendly manner?
 
 ## Application Overview
-Thinking back to the various application diagrams you have seen through the module - how would you describe an overview of the building blocks of your project - how do they connect, what do the component parts include.
+### System Architecture
+The "Smart Voice Light" project is designed around a robust wooden housing crafted via laser cutting, which encloses the system’s core electronics. The central components include an Arduino Nano 33 BLE Sense, equipped with an onboard microphone for audio input, a BH1750 light intensity sensor to adjust LED brightness automatically, and a NeoPixel LED strip that serves as the visual output. This combination allows for an intelligent lighting system that responds dynamically to both vocal commands and ambient light conditions.
+
+### Data Flow and Interaction:
+Voice commands are captured live through the Arduino’s microphone and then analyzed by a machine learning model, previously trained and deployed via the Edge Impulse platform. Depending on the recognized command—be it "link," "cut," or "breathe"—the system adjusts the LED strip accordingly. The "link" command lights up the LED strip to full brightness, which adjusts in real-time based on the readings from the BH1750 sensor, ensuring optimal lighting conditions. The "cut" command turns off the LEDs, while the "breathe" effect causes them to gently pulse, creating a calming ambiance. This setup not only offers convenience and efficiency but also enhances user interaction with 
 
 *Tip: probably ~200 words and a diagram is usually good to convey your design!*
 
 ## Data
-Describe what data sources you have used and any cleaning, wrangling or organising you have done. Including some examples of the data helps others understand what you have been working with.
 
-*Tip: probably ~200 words and images of what the data 'looks like' are good!*
+In the development of the Smart Voice Light project, we utilized a variety of audio data sourced from ambient environments and self-recordings to train our machine learning model, ensuring the robustness and versatility of the voice command recognition. The data collection involved gathering audio samples from various individuals in different settings to capture a diverse array of acoustic scenarios, including specific 'background' or silence samples. These background samples play a crucial role in training the model to distinguish between deliberate commands and inadvertent noises or silence, significantly reducing the likelihood of false activations.
+
+To prepare the data for training, it underwent several preprocessing steps. Initially, all audio samples were normalized to maintain consistency in volume and clarity across the dataset. Subsequent to normalization, we employed techniques like trimming silence and filtering background noise to refine the quality of the training data, ensuring that even subtle variations in sound are accurately captured without interference from ambient noise. The cleaned samples were then labeled accurately to correspond with the respective commands they represent—'link', 'cut', 'breathe', and 'background', forming a structured dataset that was split into training and testing sets. This balance prevents overfitting and optimizes model performance.
+
+The Edge Impulse platform was instrumental in visualizing and configuring the data, enabling us to tweak parameters such as Mel Frequency Cepstral Coefficients (MFCCs) settings, which are critical for capturing the essence of sound in model training. The detailed analysis and configuration tools provided by the platform allowed for a meticulous approach to model tuning and performance enhancement, ensuring each voice command—and the crucial non-commands represented by 'background'—triggers the appropriate response in our smart light application.
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/f48dec1a-f6ac-41af-b17a-e2ec0ddc41f0)
 
 ## Model
 This is a Deep Learning project! What model architecture did you use? Did you try different ones? Why did you choose the ones you did?
