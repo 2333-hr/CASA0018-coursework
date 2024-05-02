@@ -53,7 +53,7 @@ First, after the model training is completed, I test the accuracy of my model th
 
 During the experiment, I will use a fixed number of tests for a single word to test on different devices to measure the performance of the model. At the same time, I also used the onboard microphone code to run on the ARDUINO board to measure model performance through the serial monitor. In addition to this, I also used the model testing and performance calibration functions in Impulse egde to measure the functionality of the model through internal data testing.
 
-*Tip: probably ~300 words and graphs and tables are usually good to convey your results!*
+
 
 ## Results and Observations
 Our project aimed at implementing a smart voice-controlled lighting system exhibited promising results upon deployment on computer and mobile platforms. However, significant performance degradation was noted when deployed on the Arduino Nano 33 BLE Sense board with the onboard microphone.
@@ -76,7 +76,15 @@ While the project achieved satisfactory performance on conventional platforms, c
 ### Future Directions
 Moving forward, addressing the identified issues requires a multi-faceted approach. This includes exploring alternative feature extraction methods tailored to the Arduino Nano 33 BLE Sense's capabilities, implementing robust noise filtering algorithms, and optimizing hardware placement for improved signal reception. Additionally, leveraging machine learning techniques for adaptive model training could enhance recognition accuracy in diverse environments. By addressing these aspects, we aim to enhance the system's robustness and reliability across various deployment scenarios.
 
-*Tip: probably ~300 words and remember images and diagrams bring results to life!*
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/feb43d32-6598-4e1e-8c91-a30fbe6e8670)
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/cf727f49-16aa-49f0-9691-ebbfe2ddcc2c)
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/b4345039-ec60-428e-a5e9-9382b1884ee6)
+<img width="465" alt="f8e5db370964bfa074e86f9b3b73993" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/2d20b941-0e03-4ccf-89ea-b94709fd550c">
+<img width="473" alt="5acae144959fe3ab14a69faff46f43f" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/c99cc766-c3b7-47b0-9232-9e45cac463b1">
+<img width="426" alt="710ef57d5fd6b1196d29dadeb27cb84" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/d52a2fee-2902-4623-a6e7-5664b2a71c85">
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/0a37ba33-b544-4260-b6a6-f93d4a9b75ef)
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/5feb490b-dd87-40eb-89f9-bbf2b8fb965f)
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/2806d692-1316-4f3b-87eb-0d7fdff33627)
 
 ## Bibliography
 *If you added any references then add them in here using this format:*
