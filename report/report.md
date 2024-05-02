@@ -56,7 +56,25 @@ During the experiment, I will use a fixed number of tests for a single word to t
 *Tip: probably ~300 words and graphs and tables are usually good to convey your results!*
 
 ## Results and Observations
-Synthesis the main results and observations you made from building the project. Did it work perfectly? Why not? What worked and what didn't? Why? What would you do next if you had more time?  
+Our project aimed at implementing a smart voice-controlled lighting system exhibited promising results upon deployment on computer and mobile platforms. However, significant performance degradation was noted when deployed on the Arduino Nano 33 BLE Sense board with the onboard microphone.
+
+### Recognition Performance
+Recognition accuracy noticeably declined on the Arduino Nano 33 BLE Sense board, requiring louder audio input for successful recognition. This discrepancy may be attributed to limitations in the onboard microphone's sensitivity and the processing power of the microcontroller.
+
+### Background Noise Recognition
+Interestingly, while background noise recognition was minimal, it proved effective in preventing erroneous recognitions. However, this suggests a need for further improvement in distinguishing between signal and noise, possibly through advanced noise filtering techniques.
+
+### MFCC Processing Issues
+MFCC processing introduced occasional audio fragments containing silence or chaotic noise, contributing to recognition errors. These issues could stem from inadequacies in the MFCC feature extraction process, particularly in handling noisy or incomplete audio samples.
+
+### Hardware Deployment Impact
+Deployment within a wooden enclosure likely hindered sound transmission, exacerbating recognition challenges. This highlights the importance of optimizing hardware placement to minimize signal attenuation and maximize microphone sensitivity.
+
+### Overall Assessment
+While the project achieved satisfactory performance on conventional platforms, challenges arose upon deployment on the Arduino Nano 33 BLE Sense board. These challenges underscore the importance of considering hardware limitations and environmental factors in system design.
+
+### Future Directions
+Moving forward, addressing the identified issues requires a multi-faceted approach. This includes exploring alternative feature extraction methods tailored to the Arduino Nano 33 BLE Sense's capabilities, implementing robust noise filtering algorithms, and optimizing hardware placement for improved signal reception. Additionally, leveraging machine learning techniques for adaptive model training could enhance recognition accuracy in diverse environments. By addressing these aspects, we aim to enhance the system's robustness and reliability across various deployment scenarios.
 
 *Tip: probably ~300 words and remember images and diagrams bring results to life!*
 
