@@ -1,13 +1,23 @@
 # Smart Voice Light: A Voice-Activated Lighting System
 
 Huarui Yang
-link to github:
+link to github:[https://github.com/2333-hr/CASA0018-coursework](https://github.com/2333-hr/CASA0018-coursework)
 link to Edge Impulse projects:[https://studio.edgeimpulse.com/studio/362703](https://studio.edgeimpulse.com/studio/362703)
 
 ## Introduction
-- an overview of what the project does
-- your inspiration for making the project 
-- examples that it is based on. 
+### Project Overview
+
+The "Smart Voice Light" project is a sophisticated lighting system activated and controlled through voice commands. It leverages a voice recognition model to interpret spoken instructions like "link," "cut," and "breathe," each triggering specific lighting responses. By integrating advanced machine learning algorithms with practical hardware components, the system allows users to manage lighting atmospheres hands-free.
+
+![4bc4a68a23f8cdc26534121b72e53eb](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/75cca286-e05e-4a28-9992-5c24aa5f8c82)
+
+
+### Inspiration
+
+The inspiration behind this project stemmed from the growing demand for smart home technologies that enhance convenience and accessibility. In scenarios where manual interaction with devices is impractical or undesirable—such as cooking in the kitchen or when returning home with hands full—the ability to control lighting through voice can significantly enhance user experience and safety.
+
+### Examples and Basis
+
 
 *Tip: probably ~200 words and images are good!*
 
