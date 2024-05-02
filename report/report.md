@@ -10,6 +10,7 @@ link to Edge Impulse projects:[https://studio.edgeimpulse.com/studio/362703](htt
 ### Project Overview
 
 The "Smart Voice Light" project is a sophisticated lighting system activated and controlled through voice commands. It leverages a voice recognition model to interpret spoken instructions like "link," "cut," and "breathe," each triggering specific lighting responses. By integrating advanced machine learning algorithms with practical hardware components, the system allows users to manage lighting atmospheres hands-free.
+
 ![4bc4a68a23f8cdc26534121b72e53eb](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/75cca286-e05e-4a28-9992-5c24aa5f8c82)
 
 ### Inspiration
@@ -19,6 +20,7 @@ The inspiration behind this project stemmed from the growing demand for smart ho
 ### Examples and Basis
 
 The project draws on existing voice smart control products from products such as Amazon Echo , Google Home , Amazon Echo and Google Home as well as voice control that references various smart home features. However, unlike these products that rely on commercial cloud services, the "smart voice light" hardware runs entirely on local hardware. This approach ensures faster response times and protects user privacy. Furthermore, this project reflects a setup for real-time audio processing in embedded system design, making it a practical example of applying machine learning in an IoT environment.
+
 ![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/1bc92bd1-e1ec-4d5a-98d4-9880fc78c4ca)
 
 ## Research Question
@@ -29,7 +31,7 @@ Objective: How can voice recognition technology be effectively utilized to contr
 The "Smart Voice Light" project is designed around a robust wooden housing crafted via laser cutting, which encloses the system’s core electronics. The central components include an Arduino Nano 33 BLE Sense, equipped with an onboard microphone for audio input, a BH1750 light intensity sensor to adjust LED brightness automatically, and a NeoPixel LED strip that serves as the visual output. This combination allows for an intelligent lighting system that responds dynamically to both vocal commands and ambient light conditions.
 
 ### Data Flow and Interaction:
-Voice commands are captured live through the Arduino’s microphone and then analyzed by a machine learning model, previously trained and deployed via the Edge Impulse platform. Depending on the recognized command—be it "link," "cut," or "breathe"—the system adjusts the LED strip accordingly. The "link" command lights up the LED strip to full brightness, which adjusts in real-time based on the readings from the BH1750 sensor, ensuring optimal lighting conditions. The "cut" command turns off the LEDs, while the "breathe" effect causes them to gently pulse, creating a calming ambiance. This setup not only offers convenience and efficiency but also enhances user interaction with 
+Voice commands are captured live through the Arduino’s microphone and then analyzed by a machine learning model, previously trained and deployed via the Edge Impulse platform. Depending on the recognized command—be it "link," "cut," or "breathe"—the system adjusts the LED strip accordingly. The "link" command lights up the LED strip to full brightness, which adjusts in real-time based on the readings from the BH1750 sensor, ensuring optimal lighting conditions. The "cut" command turns off the LEDs, while the "breathe" effect causes them to gently pulse, creating a calming ambiance. This setup not only offers convenience and efficiency but also enhances user interaction with their environment.
 
 *Tip: probably ~200 words and a diagram is usually good to convey your design!*
 
@@ -40,12 +42,11 @@ In the development of the Smart Voice Light project, we utilized a variety of au
 To prepare the data for training, it underwent several preprocessing steps. Initially, all audio samples were normalized to maintain consistency in volume and clarity across the dataset. Subsequent to normalization, we employed techniques like trimming silence and filtering background noise to refine the quality of the training data, ensuring that even subtle variations in sound are accurately captured without interference from ambient noise. The cleaned samples were then labeled accurately to correspond with the respective commands they represent—'link', 'cut', 'breathe', and 'background', forming a structured dataset that was split into training and testing sets. This balance prevents overfitting and optimizes model performance.
 
 The Edge Impulse platform was instrumental in visualizing and configuring the data, enabling us to tweak parameters such as Mel Frequency Cepstral Coefficients (MFCCs) settings, which are critical for capturing the essence of sound in model training. The detailed analysis and configuration tools provided by the platform allowed for a meticulous approach to model tuning and performance enhancement, ensuring each voice command—and the crucial non-commands represented by 'background'—triggers the appropriate response in our smart light application.
-![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/f48dec1a-f6ac-41af-b17a-e2ec0ddc41f0)
+
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/9b404fcd-bd55-4e0c-b778-ef039cfce712)
 
 ## Model
-This is a Deep Learning project! What model architecture did you use? Did you try different ones? Why did you choose the ones you did?
 
-*Tip: probably ~200 words and a diagram is usually good to describe your model!*
 
 ## Experiments
 What experiments did you run to test your project? What parameters did you change? How did you measure performance? Did you write any scripts to evaluate performance? Did you use any tools to evaluate performance? Do you have graphs of results? 
