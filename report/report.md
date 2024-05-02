@@ -11,6 +11,20 @@ link to Edge Impulse projects:[https://studio.edgeimpulse.com/studio/362703](htt
 
 The "Smart Voice Light" project is a sophisticated lighting system activated and controlled through voice commands. It leverages a voice recognition model to interpret spoken instructions like "link," "cut," and "breathe," each triggering specific lighting responses. By integrating advanced machine learning algorithms with practical hardware components, the system allows users to manage lighting atmospheres hands-free.
 
+### Specific functions
+* Link recognition function
+1. When "link" is recognized, all light bars light up.
+2. The brightness of the light strip is dynamically adjusted according to the intensity of the BH1750 light intensity sensor. The stronger the light intensity, the darker the light. The weaker the light intensity, the brighter the light.
+* Cut recognition function:
+1. When "cut" is recognized, all light strips turn off.
+* Breathe recognition function:
+1. When "breathe" is recognized, the light strips all light up and show a breathing effect.
+2. The peak brightness of the breathing effect depends on the brightness of the BH1750 light intensity sensor.
+* Light intensity sensor function:
+1. Read the data from the BH1750 light intensity sensor and map it into a reasonable brightness range (for example, 0 to 255).
+2. Adjust the brightness of the light strip according to the light intensity data. The stronger the light intensity, the darker the light. The weaker the light intensity, the brighter the light, to achieve the effect of ambient light fill-in.
+* The brightness is always not 0 in link and breathe modes
+
 ![4bc4a68a23f8cdc26534121b72e53eb](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/75cca286-e05e-4a28-9992-5c24aa5f8c82)
 
 ### Inspiration
