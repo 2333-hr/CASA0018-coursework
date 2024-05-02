@@ -62,7 +62,19 @@ The Edge Impulse platform was instrumental in visualizing and configuring the da
 ![f07a01016ef3cdf0f80382e071db823](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/46cb1ca0-2666-4c69-aa30-a8bacdac3188)
 
 ## Model
+In this deep learning project for the Smart Voice Light system, we employed a Convolutional Neural Network (CNN) architecture, specifically tailored to process time-series audio data. The CNN model is advantageous for this application due to its proficiency in detecting spatial hierarchies in data, which aligns well with the patterns found in sound waves.
 
+We selected the Mel Frequency Cepstral Coefficients (MFCC) as features for the CNN, capturing the essential characteristics of the audio signals. MFCCs are effective in representing the power spectrum of sound, based on human hearing perceptions, making them ideal for audio recognition tasks. This feature extraction is crucial for identifying distinct commands like 'link', 'cut', 'breathe', and ambient 'background' noises.
+
+During the development phase, we experimented with different neural network architectures, including simpler models like Multi-Layer Perceptrons (MLP) and more complex Recurrent Neural Networks (RNN). However, CNNs provided the best balance between accuracy and computational efficiency on the constrained environment of an Arduino Nano 33 BLE Sense.
+
+The final model structure consisted of several convolutional layers that help in extracting high-level features from the input MFCCs, followed by pooling layers to reduce dimensionality and increase the field of reception. A few dense layers followed for decision making. This architecture ensured our model was both lightweight and efficient, providing real-time performance essential for interactive applications.
+
+Below is a simplified diagram of the model architecture used:
+
+![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/6cdf2039-182e-4a03-b259-5f547827d97c)
+
+This architecture was fine-tuned through iterative testing and validation, ensuring the model's reliability in detecting and classifying various audio commands effectively.
 
 ## Experiments
 First, after the model training is completed, I test the accuracy of my model through the test page provided by Inpulse Edge (including web and mobile). After deploying the model on ARDUINO NANO 33 BLE, I also tested the project through the output of the onboard microphone on the serial monitor. I actually had multiple iterations of my model. During the iteration, in addition to increasing the number of samples, I also adjusted some model parameters. Firstly, I adjusted the window size during MFCC audio processing to cover my longest keyword length, and secondly, I adjusted the window increase parameter to ensure that the keywords are not split between the two windows, but also long enough to avoid data Too much overlap leads to increased processing burden. In addition, I also adjusted and manually added silent areas to try to ensure the accuracy of sampling. In addition to these, I have also changed the training parameters, including the number of iterations and learning rate, the number of iterations, the Dropout rate in the Neural network architecture, and the model complexity. Try a smaller learning rate, which may help the model converge more stably during training. Consider using a higher dropout rate to reduce the risk of overfitting. At the same time, because my sample data is limited, an overly complex model may lead to overfitting, so I also tried to simplify the model and finally trained the final model version.
@@ -101,14 +113,12 @@ Moving forward, addressing the identified issues requires a multi-faceted approa
 ![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/2806d692-1316-4f3b-87eb-0d7fdff33627)
 
 ## Bibliography
-*If you added any references then add them in here using this format:*
-
-1. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
-
-2. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
-
-*Tip: we use [https://www.citethisforme.com](https://www.citethisforme.com) to make this task even easier.* 
-
+1. Kurniawan, A. (2020). Hands-On Edge AI with Arduino. Birmingham, UK: Packt Publishing. https://www.packtpub.com/product/hands-on-edge-ai-with-arduino/9781800207285
+2. Pal, A. (2021). TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers. Sebastopol, CA: O'Reilly Media. https://www.oreilly.com/library/view/tinyml/9781492052036/
+3. Zhang, T., & Le, Q. V. (2020). Lookahead Optimizer: k steps forward, 1 step back. Advances in Neural Information Processing Systems, 32. http://proceedings.neurips.cc/paper/2020/hash/b41cc65f72e39e1a592b54af22e6a542-Abstract.html
+4. Arduino. (n.d.). Arduino Nano 33 BLE Sense. Retrieved from https://store.arduino.cc/arduino-nano-33-ble-sense
+5. Tzu-Chieh, T., Yen-Chieh, C., & Pau-Choo, C. (2016). Smart home voice control system based on deep learning. 2016 IEEE International Conference on Consumer Electronics - Taiwan (ICCE-TW). https://ieeexplore.ieee.org/document/7803953
+   
 ## Declaration of Authorship
 
 I, Huarui Yang, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
