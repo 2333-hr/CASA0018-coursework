@@ -24,7 +24,7 @@ The project draws on existing voice smart control products from products such as
 ![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/1bc92bd1-e1ec-4d5a-98d4-9880fc78c4ca)
 
 ## Research Question
-Objective: How can voice recognition technology be effectively utilized to control lighting systems in a responsive and user-friendly manner?
+How can voice recognition technology be effectively utilized to control lighting systems in a responsive and user-friendly manner?
 
 ## Application Overview
 ### System Architecture
@@ -33,7 +33,7 @@ The "Smart Voice Light" project is designed around a robust wooden housing craft
 ### Data Flow and Interaction:
 Voice commands are captured live through the Arduino’s microphone and then analyzed by a machine learning model, previously trained and deployed via the Edge Impulse platform. Depending on the recognized command—be it "link," "cut," or "breathe"—the system adjusts the LED strip accordingly. The "link" command lights up the LED strip to full brightness, which adjusts in real-time based on the readings from the BH1750 sensor, ensuring optimal lighting conditions. The "cut" command turns off the LEDs, while the "breathe" effect causes them to gently pulse, creating a calming ambiance. This setup not only offers convenience and efficiency but also enhances user interaction with their environment.
 
-*Tip: probably ~200 words and a diagram is usually good to convey your design!*
+<img width="1280" alt="47365f3998f14e9f6fadb9674393321" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/457a3058-312c-466c-9b36-c159199651b4">
 
 ## Data
 
@@ -44,6 +44,8 @@ To prepare the data for training, it underwent several preprocessing steps. Init
 The Edge Impulse platform was instrumental in visualizing and configuring the data, enabling us to tweak parameters such as Mel Frequency Cepstral Coefficients (MFCCs) settings, which are critical for capturing the essence of sound in model training. The detailed analysis and configuration tools provided by the platform allowed for a meticulous approach to model tuning and performance enhancement, ensuring each voice command—and the crucial non-commands represented by 'background'—triggers the appropriate response in our smart light application.
 
 ![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/9b404fcd-bd55-4e0c-b778-ef039cfce712)
+![afc378ccb9600ad0e0a76400294321e](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/a14dcd8c-e091-4569-814e-b9de1113dda7)
+![f07a01016ef3cdf0f80382e071db823](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/46cb1ca0-2666-4c69-aa30-a8bacdac3188)
 
 ## Model
 
@@ -52,8 +54,6 @@ The Edge Impulse platform was instrumental in visualizing and configuring the da
 First, after the model training is completed, I test the accuracy of my model through the test page provided by Inpulse Edge (including web and mobile). After deploying the model on ARDUINO NANO 33 BLE, I also tested the project through the output of the onboard microphone on the serial monitor. I actually had multiple iterations of my model. During the iteration, in addition to increasing the number of samples, I also adjusted some model parameters. Firstly, I adjusted the window size during MFCC audio processing to cover my longest keyword length, and secondly, I adjusted the window increase parameter to ensure that the keywords are not split between the two windows, but also long enough to avoid data Too much overlap leads to increased processing burden. In addition, I also adjusted and manually added silent areas to try to ensure the accuracy of sampling. In addition to these, I have also changed the training parameters, including the number of iterations and learning rate, the number of iterations, the Dropout rate in the Neural network architecture, and the model complexity. Try a smaller learning rate, which may help the model converge more stably during training. Consider using a higher dropout rate to reduce the risk of overfitting. At the same time, because my sample data is limited, an overly complex model may lead to overfitting, so I also tried to simplify the model and finally trained the final model version.
 
 During the experiment, I will use a fixed number of tests for a single word to test on different devices to measure the performance of the model. At the same time, I also used the onboard microphone code to run on the ARDUINO board to measure model performance through the serial monitor. In addition to this, I also used the model testing and performance calibration functions in Impulse egde to measure the functionality of the model through internal data testing.
-
-
 
 ## Results and Observations
 Our project aimed at implementing a smart voice-controlled lighting system exhibited promising results upon deployment on computer and mobile platforms. However, significant performance degradation was noted when deployed on the Arduino Nano 33 BLE Sense board with the onboard microphone.
