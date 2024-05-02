@@ -35,7 +35,7 @@ The inspiration behind this project stemmed from the growing demand for smart ho
 
 The project draws on existing voice smart control products from products such as Amazon Echo , Google Home , Amazon Echo and Google Home as well as voice control that references various smart home features. However, unlike these products that rely on commercial cloud services, the "smart voice light" hardware runs entirely on local hardware. This approach ensures faster response times and protects user privacy. Furthermore, this project reflects a setup for real-time audio processing in embedded system design, making it a practical example of applying machine learning in an IoT environment.
 
-![image](https://github.com/2333-hr/CASA0018-coursework/assets/146243657/1bc92bd1-e1ec-4d5a-98d4-9880fc78c4ca)
+<img width="766" alt="6cfe25c88f9082a4f482e5f499d65c6" src="https://github.com/2333-hr/CASA0018-coursework/assets/146243657/4f0022d9-a856-4037-b4b7-09b04faed475">
 
 ## Research Question
 How can voice recognition technology be effectively utilized to control lighting systems in a responsive and user-friendly manner?
